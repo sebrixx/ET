@@ -1,0 +1,49 @@
+{% extends 'core/base.html' %}
+{% load static %}
+
+{% block css %}
+<link rel="stylesheet" href="{% static 'css/estilo_plantas.css' %}">
+<link rel="icon" type="image/png" href="{% static 'img/icons8_greenhouse_50px.png' %}">
+{% endblock %}
+
+{% block js %}
+<script src="{% static 'js/funciones.js' %}"></script>
+{% endblock %}
+
+{% block content %}
+
+<section class="divisor">
+    <h4>Plantas</h4>
+    <div id="linea"></div>
+    <img src="{% static 'img/icons8_sunflower_50px.png' %}" alt="">
+</section>
+<div class="catalogo-plantas">
+    {% for i in plantas %}
+        <div class="plantas">
+            <div class="img">
+                <h4>{{ i.nombre }}</h4>
+                <img src="{% static i.imagen %}">
+            </div>
+            <div class="info-producto">
+                <p>{{ i.detalle }}</p>    
+            </div>
+            <div class="datos-nro">
+                <div class="datos-oferta">
+                    <p class="precio-producto">{{ i.tachado }}</p>
+                    <br>
+                    <p>{{ i.descuento }}</p>
+                </div>
+                <div class="datos-nro2">
+                    <p class="precio-producto2">Precio actual: ${{ i.precio }}</p>
+                    <p class="stock-producto">Stock: {{ i.stock }}</p>
+                </div>
+            </div>
+            
+            <div class="productos-btns">
+                <button type="button" class="btn-cart"><a href="{% url 'addtocar' i.codigo %}">Agregar al carrito</a></a><span><i class="fa-regular fa-plus"></i></span></button>
+            </div>
+        </div>
+
+    {% endfor %}
+</div>
+{% endblock %}

@@ -1,0 +1,416 @@
+@import url('https://fonts.googleapis.com/css2?family=Josefin+Sans&display=swap');
+* {
+    margin: 0;
+    padding: 0;
+    font-family: 'Josefin Sans', sans-serif;
+}
+
+#main {
+    padding-top: 40px;
+    /* height: 40vh; */
+    background-size: cover;
+    background-position: center;
+    width: 80%;
+}
+
+.texto {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    font-size: 2.6rem;
+    color: #ffffff;
+}
+
+.carrusel {
+    align-items: center;
+    background-size: cover;
+    background-position: center;
+    /* padding: 50px; */
+    /* margin-top: -80px; */
+    z-index: -10;
+}
+
+.boton {
+    width: 100%;
+    justify-content: space-around;
+    display: flex;
+    align-items: center;
+    border: 2px #868686 solid;
+    padding: 5px;
+    margin: 5px 0px;
+    background-color: #D9E2E5;
+    font-size: .8rem;
+    letter-spacing: 2px;
+    font-weight: bold;
+    transition-duration: .5s;
+}
+
+.boton:hover {
+    transition-duration: .5s;
+    background-color: #ffffff;
+}
+
+.boton>img {
+    height: 25px;
+}
+
+.boton>p {
+    margin-top: 0.5rem;
+    margin-bottom: 0.5rem;
+    font-size: 16px;
+}
+
+.divisor{
+    width: 100%;
+    margin: 40px 0px;
+}
+
+.divisor > h4{
+    
+    color: #00BFB3;
+    text-align: center;
+}
+
+.divisor > img{
+    display: block;
+    margin: 0 auto;
+    position: relative;
+    margin-top: -57px;
+    background-color:transparent;
+}
+
+#linea{
+    background-color: #00BFB3;
+    height: 4px;
+    width: 100%;
+    margin: 30px 0px;
+}
+
+
+
+#catalogo1 {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+    row-gap: 20px;
+}
+
+
+.variedad {
+    display: flex;
+    flex-direction: column;
+    width: 30%;
+    height: 50vh;
+    background-position: center;
+    background-size: cover;
+}
+
+.imagen1{
+    background-image: url('../img/planta.jpeg');
+}
+
+.imagen2{
+    background-image: url('../img/Cactus.jpg');
+}
+
+.imagen3{
+    background-image: url('../img/suculentas-mano-mimercadito.jpg');
+}
+
+.imagen4{
+    background-image: url('../img/Maceteros.jpg');
+}
+
+.imagen5{
+    background-image: url('../img/decoracion.jpg');
+}
+
+.imagen6{
+    background-image: url('../img/Abono-sustrato.jpg');
+}
+
+.imagen7{
+    background-image: url('../img/Herramientas-para-tus-plantas.jpg');
+}
+
+.info {
+    height: 100%;
+    padding: 10px;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    row-gap: 20px;
+    background: linear-gradient(180deg, #ffffff,transparent);
+}
+
+.info > p{
+    font-size: 18px;
+    text-align: justify;
+}
+
+.info a{
+    font-size: 18px;
+    text-align: justify;
+    text-decoration: none;
+    color: #000000;
+}
+
+
+.info > h4{
+    font-weight: bold;
+}
+
+ul,
+li {
+    list-style: none;
+}
+
+.imagenes{
+    width: 200px;
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+}
+
+.imagenes li a{
+    background-color: transparent;
+    color: #2C4C41;
+    text-decoration: none;
+    padding: 10px 15px;
+    display: block;
+}
+
+.imagenes li a:hover{
+    background-color: #0EBABA(135, 255, 255);
+}
+
+.imagenes > li{
+    float: left;
+}
+
+.imagenes li ul{
+    display: none;
+    position: absolute;
+    min-width: 100px;
+    background: #ADEFD7;
+}
+
+.imagenes liv:hover{
+    display: block;
+}
+
+
+
+#quienes-somos{
+    display: flex;
+    background-color: #F5BF99;
+    background-size: cover;
+    align-items: center;
+}
+
+#quienes-somos > p{
+    margin-top: 0;
+    margin-bottom: 0;
+}
+
+.descripcion{
+    align-self: center;
+    text-justify: auto;
+    padding: 30px;
+    font-size: 1.2rem;
+    text-align: justify;
+}
+
+.jardineria {
+    width: 40%;
+    padding-left: 15px;
+}
+
+/* SEGUIMIENTO */
+.article-seguimiento .article-titulo {
+    display: flex;
+    margin: 85px 50px 50px 70px;
+    justify-content: center;
+    text-align: center;
+}
+
+.article-seguimiento > h2{
+    color:  #00BFB3;
+    font-size: 40px;
+}
+
+.seguimiento > button{
+    background-image: url(img/celeste.jpg);
+}
+
+.imagen-camion {
+    display: flex;
+    justify-content: center;
+}
+
+.article-seguimiento .seguimiento {
+    display: flex;
+    padding: 50px 30px;
+}
+
+.seguimiento .seguimiento-input {
+    padding: 20px;
+    font-size: 22px;
+}
+
+.seguimiento .seguimiento-btn {
+    border-radius: 10%;
+    width: 7%;
+}
+
+.seguimiento-btn img {
+    height: 40px;
+}
+
+@media screen and (max-width: 600px) {
+    .article-titulo {
+        align-items: center;
+    }
+
+    .seguimiento-btn>img {
+        width: 80%;
+        height: 30%;
+    }
+
+    .seguimiento-btn {
+        width: 20px;
+    }
+
+    .seguimiento-input {
+        width: 30px;
+        height: 30px;
+    }
+}
+
+@media screen and (max-width: 992px) {
+    .seguimiento-btn>img {
+        width: 70%;
+        height: 50%;
+    }
+}
+
+@media screen and (min-width: 1920px) {
+    .article-seguimiento {
+        margin-left: 200px;
+        padding-right: 300px;
+    }
+}
+
+/* DESCUENTO */
+.article-descuento .article-titulo {
+    display: flex;
+    margin: 85px 50px 50px 70px;
+    justify-content: center;
+    text-align: center;
+}
+
+.article-descuento > h2{
+    color:  #00BFB3;
+    font-size: 35px;
+}
+
+.imagen-regalo {
+    display: flex;
+    justify-content: center;
+    padding: 5px;
+}
+
+.checkbox-descuento {
+    display: flex;
+    justify-content: center;
+    justify-content: space-evenly;
+}
+
+.buttonSub{
+    border: none;
+    width: 11%;
+    color: white;
+    font-size: 17px;
+    background:  #5d8ad3;
+    padding: 15px 20px;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.buttonSub2{
+    border: none;
+    width: 12%;
+    color: white;
+    font-size: 17px;
+    background:  #5d8ad3;
+    padding: 15px 20px;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.buttonSub3{
+    border: none;
+    color: white;
+    font-size: 17px;
+    background:  #ad003a;
+    padding: 15px 20px;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.buttonSub:hover{
+    background: rgb(95, 160, 120);
+}
+
+.buttonSub2:hover{
+    background: rgb(160, 95, 95);
+}
+
+
+@media screen and (max-width: 767px) {
+    /* Estilos para dispositivos móviles */
+    nav {
+        flex-direction: column;
+    }
+
+    nav ul {
+        flex-direction: column;
+}
+
+    nav li {
+        margin: 10px 0;
+    }
+}
+
+@media screen and (min-width: 768px) and (max-width: 1023px) {
+    /* Estilos para tabletas */
+    nav li {
+        margin: 0 20px;
+    }
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

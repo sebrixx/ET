@@ -1,0 +1,120 @@
+/* LOGIN
+body {
+    margin: 0;
+    background: url(../img/fondo.jpg);
+    background-size: cover;
+    background-attachment: fixed;
+}
+
+* {
+    box-sizing: border-box;
+    font-family: "Alkatra variant0", Tofu;
+}
+
+.contenedor{
+    width: 100%;
+    padding: 15px;
+}
+
+.formulario{
+    background: #fff;
+    margin-top: 150px;
+    padding: 3px;
+}
+
+h1{
+    text-align: center;
+    color: #1a2537;
+    font-size: 40px;
+}
+
+input[type="email"],
+input[type="password"]{
+    font-size: 20px;
+    width: 88.315%;
+    padding: 10px;
+    border: none;
+}
+
+.input-contenedor{
+    margin-bottom: 15px;
+    border: 1px solid #aaa;
+}
+.icon{
+    min-width: 50px;
+    text-align: center;
+    color: #999;
+}
+
+.button{
+    border: none;
+    width: 100%;
+    color: white;
+    font-size: 20px;
+    background:  #1a2537;
+    padding: 15px 20px;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.button:hover{
+    background: cadetblue;
+}
+
+p{
+    text-align: center;
+}
+
+.link{
+    text-decoration: none;
+    color: #1a2537;
+    font-weight: 600;
+}
+
+.link:hover{
+    color: cadetblue;
+}
+
+@media(min-width:768px)
+{
+    .formulario{
+        width: 500px;
+        border-radius: 2%;
+    }
+}
+
+.error{
+    background-color: #D9E2E5;
+} */
+
+#login{
+    width: 40%;
+    display: flex;
+    flex-direction: column;
+    row-gap: 5px;
+    margin: 40px 0px;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

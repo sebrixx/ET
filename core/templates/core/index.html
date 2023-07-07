@@ -1,0 +1,215 @@
+{% extends 'core/base.html' %}
+{% load static %}
+
+{% block css %}
+<link rel="stylesheet" href="{% static 'css/estilo.css' %}">
+<link rel="icon" type="image/png" href="{% static 'img/icons8_greenhouse_50px.png' %}">
+{% endblock %}
+
+{% block js %}
+<script src="{% static 'js/funciones.js' %}"></script>
+{% endblock %}
+
+<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-9ndCyUaIbzAi2FUVXJi0CjmCapSmO7SnpJef0486qhLnuZ2cdeRhO02iuK6FUUVM" crossorigin="anonymous">
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js" integrity="sha384-geWF76RCwLtnZ8qwWowPQNguL3RmwHVBC9FhGdlKrxdiJJigb/j/68SIy3Te4Bkz" crossorigin="anonymous"></script>
+
+{% block content %}
+    <article id="main">
+        <section class="carrusel">
+            <div id="carrusel" class="carousel slide">
+                <div class="carousel-inner">
+                    <div class="carousel-item active">
+                        <img src="{% static 'img/cactus-errores-cuidados-t.jpg.jpg' %}" class="d-block w-100" alt="...">
+                    </div>
+                    <div class="carousel-item">
+                        <img src="{% static 'img/tipos-de-viveros.jpg' %}" class="d-block w-100" alt="...">
+                    </div>
+                    <div class="carousel-item">
+                        <img src="{% static 'img/D6SKTYJVINHRHFL3XOJ4QWKXDA.jpg' %}" class="d-block w-100" alt="...">
+                    </div>
+                </div>
+                <button class="carousel-control-prev" type="button" data-bs-target="#carrusel" data-bs-slide="prev">
+                    <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                    <span class="visually-hidden">Previous</span>
+                </button>
+                <button class="carousel-control-next" type="button" data-bs-target="#carrusel" data-bs-slide="next">
+                    <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                    <span class="visually-hidden">Next</span>
+                </button>
+            </div>
+        </section>
+        <!-- ¿QUIÉNES SOMOS? -->
+        <section class="divisor">
+            <h4>¿Quiénes somos?</h4>
+            <div id="linea"></div>
+            <img src="{% static 'img/icons8_sunflower_50px.png' %}" alt="">
+        </section>
+
+        <section id="quienes-somos">
+            <img src="{% static 'img/jardineria.jpg' %}" alt="quienes somos" class="jardineria">
+            <p class="descripcion">
+                Somos un equipo de entusiastas de la jardinería con una pasión por las plantas y la creación de
+                hermosos espacios verdes.
+                Nos apasiona ayudar a las personas a descubrir y cultivar su amor por la jardinería y compartir
+                nuestro conocimiento y experiencia en el cuidado de las plantas.
+                Nuestra tienda en línea de plantas y artículos de jardinería es el resultado de nuestra dedicación y
+                compromiso con la creación de un espacio donde los amantes de la jardinería puedan encontrar todo lo
+                que necesitan para crear y mantener un hermoso jardín en su hogar.
+                Nos enorgullece ofrecer una amplia variedad de plantas, semillas, herramientas y productos de alta
+                calidad para satisfacer todas las necesidades de nuestros clientes. Además, nuestro equipo de
+                expertos en jardinería está siempre disponible para brindar asesoramiento y apoyo en todas las
+                etapas de la creación y cuidado de un jardín.
+                Creemos que la jardinería es una forma maravillosa de conectar con la naturaleza y crear un ambiente
+                relajante y armonioso en el hogar. Por eso, estamos comprometidos a ofrecer productos y servicios de
+                calidad excepcional para ayudar a nuestros clientes a crear el jardín de sus sueños.
+                En resumen, somos un equipo apasionado y comprometido con la jardinería que se esfuerza por ofrecer
+                los mejores productos y servicios para ayudar a nuestros clientes a disfrutar de la belleza y la
+                tranquilidad de la naturaleza en su hogar.
+            </p>
+        </section>
+    </article>
+    <!-- DESCRIPCIÓN PLANTA -->
+    <section class="divisor">
+        <h4>Productos</h4>
+        <div id="linea"></div>
+        <img src="{% static 'img/icons8_sunflower_50px.png' %}" alt="">
+    </section>
+    <article id="catalogo1">
+        <div class="variedad imagen1">
+            <div class="info">
+                <h4>Plantas</h4>
+                <p>Plantas y flores de temporada para interior y exterior.</p>
+                <div class="boton">
+                    <a href="{% url 'productos' %}">Ver más</a>
+                    <img src="{% static 'img/icons8_natural_user_interface_2_50px.png' %}" alt="">       
+                </div>
+            </div>
+
+        </div>
+        <!-- DESCRIPCIÓN CACTUS -->
+        <div class="variedad imagen2">
+            <div class="info">
+                <h4>Cactus</h4>
+                <p>No requieren tanto cuidado, ideales para coleccionar o regalar.</p>
+                <div class="boton">
+                    <a href="{% url 'cactus' %}">Ver más</a>
+                    <img src="{% static 'img/icons8_natural_user_interface_2_50px.png' %}" alt="">
+                </div>
+            </div>
+
+        </div>
+        <!-- DESCRIPCIÓN SUCULENTAS -->
+        <div class="variedad imagen3">
+            <div class="info">
+                <h4>Suculentas</h4>
+                <p>Variedad de especies que requieren de un cuidado especial y son aptas para todas las edades.</p>
+                <div class="boton">
+                    <a href="{% url 'suculentas' %}">Ver más</a>
+                    <img src="{% static 'img/icons8_natural_user_interface_2_50px.png' %}" alt="">
+                </div>
+            </div>
+
+        </div>
+
+        <!-- DESCRIPCIÓN MACETEROS -->
+
+        <div class="variedad imagen4">
+            <div class="info">
+                <h4>Maceteros</h4>
+                <p>Maceteros de diferentes colores y materiales para tus queridas plantas.</p>
+                <div class="boton">
+                    <a href="{% url 'maceteros' %}">Ver más</a>
+                    <img src="{% static 'img/icons8_natural_user_interface_2_50px.png' %}" alt="">
+                </div>
+            </div>
+        </div>
+        <!-- DESCRIPCIÓN VARIEDAD -->
+        <div class="variedad imagen5">
+            <div class="info">
+                <h4>Decoración</h4>
+                <p>Variación de decoración para tus plantas y propios arreglos.</p>
+                <div class="boton">
+                    <a href="{% url 'decoracion' %}">Ver más</a>
+                    <img src="{% static 'img/icons8_natural_user_interface_2_50px.png' %}" alt="">
+                </div>
+            </div>
+        </div>
+        <!-- DESCRIPCIÓN ABONO Y SUSTRATO -->
+        <div class="variedad imagen6">
+            <div class="info">
+                <h4>Sustratos</h4>
+                <p>Tierras, abonos, vitaminas y todo lo necesario para que tu planta crezca.</p>
+                <div class="boton">
+                    <a href="{% url 'sustratos' %}">Ver más</a>
+                    <img src="{% static 'img/icons8_natural_user_interface_2_50px.png' %}" alt="">
+                </div>
+            </div>
+        </div>
+
+        <!-- DESCRIPCIÓN UTENSILIOS -->
+
+        <div class="variedad imagen7">
+            <div class="info">
+                <h4>Utensilios</h4>
+                <p>Todos los utensilios necesarios para un mejor cuidado de tus plantas.</p>
+                <div class="boton">
+                    <a href="{% url 'utensilios' %}">Ver más</a>
+                    <img src="{% static 'img/icons8_natural_user_interface_2_50px.png' %}" alt="">
+                </div>
+            </div>
+        </div>
+    </article>
+
+    <!-- SEGUIMIENTO -->
+    <div class="article-seguimiento">
+        <h2 id="seguimiento" class="article-titulo">
+            Haz seguimiento de tu compra
+        </h2>
+        <div class="imagen-camion">
+            <img src="{% static 'img/icons8_in_transit_80px.png' %}" alt="delivery" class="camion-reparto" />
+        </div>
+        <div class="seguimiento input-group mb-3">
+            <input type="number" class="seguimiento-input form-control" placeholder="Ingrese número de seguimiento"
+                aria-label="Recipient's username" aria-describedby="button-addon2" />
+            <button class="seguimiento-btn btn-outline-secondary" type="button" id="button-addon2">
+                <img src="{% static 'img/icons8_Search_50px_1.png' %}" alt="" />
+            </button>
+        </div>
+    </div>
+    <!-- DESCUENTOS/PROMOS -->
+    <div class="article-descuento">
+        <h2 id="descuento" class="article-titulo">
+            Suscribete y obtén un 5% de descuento en el total de tu compra
+        </h2>
+        <div class="imagen-regalo">
+            <img src="{% static 'img/icons8_discount_80px.png' %}" alt="descuento" class="descuentos/promos" />
+        </div>
+        <form name="formulario" action="" onsubmit="validarFormulario()">
+            <div class="descuento input-group mb-3">
+                <div class="form-floating mb-3 error">
+                    <input type="text" class="form-control error" id="floatingInput" placeholder="name"
+                        onkeyup="validarNombre('#floatingInput')">
+                    <label for="floatingInput"><b>Nombre</b></label>
+                </div>
+                <div class="form-floating">
+                    <input type="text" class="form-control error" id="floatingName" placeholder="lastname"
+                        onkeyup="validarNombre('#floatingName')">
+                    <label for="floatingInput"><b>Apellido</b></label>
+                </div>
+                <div class="form-floating">
+                    <input type="email" class="form-control error" id="floatingLastname" placeholder="name@.com"
+                        onkeyup="validarCorreo('#floatingLastname')">
+                    <label for="floatingLastname"><b>Correo electrónico</b></label>
+                </div>
+            </div>
+                <div class="checkbox-descuento">
+                    <input type="submit" value="Suscribirse" class="buttonSub" action="" onclick="validarSuscripcion()">
+                    <input type="submit" value="Desuscribirse" class="buttonSub2" action="" onclick="validarDesuscripcion()">
+                    <input type="submit" value="Consulta vigencia suscripción" class="buttonSub3" action="" onclick="validarSuscripcion()">
+                </div>
+        </form>
+
+    </div>
+    
+
+{% endblock %}

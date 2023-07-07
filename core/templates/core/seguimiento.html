@@ -1,0 +1,66 @@
+{% extends 'core/base.html' %}
+{% load static %}
+
+{% block css %}
+<link rel="stylesheet" href="{% static 'css/seguimiento.css' %}"> 
+{% endblock %}
+
+{% block head %}
+<script src="{% static 'js/funciones.js' %}"></script>
+{% endblock %}
+
+{% block content %}
+
+    <div id="seguimiento">
+    <div class="container">
+        <div class="row">
+        <div class="col-md-12">
+            <h1>Seguimiento de compra #TA001</h1>
+            <h6>Nombre Cliente: Tamár Avilés<br>
+            Región: Metropolitana <br>
+            Comuna: Melipilla<br>
+            Productos Comprados: 3 Tulipanes, 1 Macetero<br>
+            N° Celular: +56957240298</h6>
+            <br>
+        </div>
+        </div>
+        <div class="row">
+          <div class="col-md-12">
+            <ul class="progress-tracker">
+              <li class="step active">
+                <span class="step-number">1</span>
+                <span class="step-name">Recibido</span>
+                <div class="form-check form-switch">
+                  <input class="form-check-input" type="checkbox" role="switch" id="flexSwitchCheckChecked" checked>
+                </div>
+              </li>
+              <li class="step">
+                <span class="step-number">2</span>
+                <span class="step-name">En proceso</span>
+                <div class="form-check form-switch">
+                  <input class="form-check-input" type="checkbox" role="switch" id="flexSwitchCheckChecked" checked>
+                </div>
+              </li>
+              <li class="step">
+                <span class="step-number">3</span>
+                <span class="step-name">En Reparto</span>
+                <div class="form-check form-switch">
+                  <input class="form-check-input" type="checkbox" role="switch" id="flexSwitchCheckChecked" checked>
+                </div>
+              </li>
+              <li class="step">
+                <span class="step-number">4</span>
+                <span class="step-name">Entregado</span>
+                <div class="form-check form-switch">
+                  <input class="form-check-input" type="checkbox" role="switch" id="flexSwitchCheckChecked" checked>
+                </div>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </div>
+      <a href="{% url 'home' %}">
+      <button type="button" class="btn btn-success">Despacho Exitoso!</button>
+    </a>
+    </div>
+{% endblock %}

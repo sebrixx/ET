@@ -1,0 +1,46 @@
+{% extends 'core/base.html' %}
+{% load static %}
+{% load crispy_forms_tags %}
+
+{% comment %} {% block css %}
+<link rel="stylesheet" href="{% static 'css/login.css' %}"> 
+<script src="funciones.js"></script>
+<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.6.3/css/all.css"> 
+<link rel="icon" type="image/png" href="{% static 'img/icons8_greenhouse_50px.png' %}">
+{% endblock %} {% endcomment %}
+
+{% block content %}
+<h1>Iniciar Sesión</h1>
+<section id="catalogo">
+    <form action="" method="post" id="login">
+        {% csrf_token %}
+        {{form | crispy }}
+        <button type="submit" class="btn btn-success">Ingresar</button>
+    </form>
+</section>
+{% endblock %}
+
+
+
+    {% comment %} <form action="index.html" class="formulario" onsubmit="return validarFormulario()">
+        <h1>Iniciar Sesión</h1>
+        <div class="contenedor">
+
+            <h3 id="mensaje"></h3>
+        <div class="input-contenedor">
+            <i class="fas fa-envelope icon"></i>
+            <input type="email" name="Correo" id="correo" placeholder="Correo Electrónico" onkeyup="validarCorreo('#correo')" class="error">
+        </div>
+
+        <div class="input-contenedor">
+            <i class="fas fa-key icon"></i>
+            <input type="password" name="Contraseña" id="contrasena" placeholder="Contraseña" onkeyup="validarContrasena('#contrasena')" class="error">
+        </div>
+
+        <input type="submit" value="Iniciar Sesión" class="button">
+        <p>¿No tienes cuenta? <a class="link" href="{% url 'registro' %}">Regístrate</a></p>
+        
+        </div>
+
+    </form> {% endcomment %}
+{% comment %} {% endblock %}  {% endcomment %}

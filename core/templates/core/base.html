@@ -1,0 +1,113 @@
+{% load static %}
+
+<head>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha2/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-aFq/bzH65dt+w6FI2ooMVUpc+21e0SRygnTpmBvdBgSdnuTN7QbdgL+OapgHtvPp" crossorigin="anonymous">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha2/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-qKXV1j0HvMUeCBQ+QVp7JcfGl760yU08IQ+GpUo5hlbpg51QRiuqHAJz8+BrxE/N"
+        crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="{% static 'css/base.css' %}">
+    <title>GreenHouse</title>
+    <link rel="icon" type="image/png" href="{% static 'img/icons8_greenhouse_50px.png' %}">
+    {% block css %}
+
+    {% endblock %}
+</head>
+
+<!--  -->
+
+<body>
+    <header>
+        <div id="arriba">
+            <div class="logo">
+                <a href="{% url 'home' %}">
+                <img src="{% static 'img/icons8_greenhouse_50px.png' %}" alt="home" class="imagen">
+                </a>
+                <h5>GreenHouse</h5>
+            </div>
+            
+            <nav id="links">
+                <a href="{% url 'home' %}">Inicio</a>
+                <a href="#quienes-somos">¿Quiénes somos?</a>
+                <a href="#pie">Contáctanos</a>
+                {% if user.is_authenticated %}
+                <a href="{% url 'historial' %}">Historial de Compras</a>
+                {% endif %}
+            </nav>
+            <div class="usuario">
+                {% if user.is_authenticated %}
+                    {{user.username}}
+                    {% if suscrito %}
+                        ⭐
+                    {% else %}
+                        🚫
+                    {% endif %}
+                    <a href="{% url 'logout' %}">Salir</a>
+                {% else %}
+                    <a href="{% url 'login' %}">Iniciar Sesión</a>
+                    <a href="{% url 'registro' %}">Registro</a> 
+                {% endif %}
+                <li><a href="{% url 'login' %}"><img src="{% static 'img/icons8_male_user_50px.png' %}" alt=""></a></li>
+            </div>
+            <div class="cart">
+                <a href="{% url 'carrito' %}">
+                    <img src="{% static 'img/icons8_shopping_cart_80px_1.png' %}" alt="">
+                </a>
+            </div>
+                    <!-- <ul>
+                        <li><a href="">Ver Carrito</a></li>
+                        <li><a href="">Eliminar Productos</a></li>
+                    </ul> -->
+                </li>
+            </div>
+        </div>
+        <!-- SUBMENU PARTE SUPERIOR -->
+        <div id="abajo">
+            <div class="submenu">
+                <img src="{% static 'img/icons8_in_transit_50px.png' %}" alt="seguimiento">
+                <a href="#seguimiento">Seguimiento</a>
+            </div>
+            <div class="submenu">
+                <img src="{% static 'img/icons8_discount_50px.png' %}" alt="descuento">
+                <a href="{% url 'suscribir' %}">Suscripcion</a>
+            </div>
+            <div class="submenu">
+                <img src="{% static 'img/icons8_receive_cash_50px.png' %}" alt="donacion">
+                <a href="#donacion">Donación</a>
+            </div>
+        </div>
+    </header>
+    {% block content %}
+
+    {% endblock %}
+    <footer id="pie">
+        <div id="izquierda">
+            <h5>Encuéntranos</h5>
+            <nav>
+
+                <a>Dirección: Zorzal #680, Melipilla</a>
+                <a>Teléfono fijo: 02-2851-6570</a>
+                <a>Celular: +569 63849686</a>
+                <a>Correo electrónico: greenhouse@gmail.com</a>
+
+            </nav>
+        </div>
+        <div id="centro">
+            <h5>Algunos Enlaces</h5>
+            <nav>
+                <a href="#quienes-somos">¿Quiénes somos?</a>
+                <a href="{% url 'login' %}">Inicia Sesión</a>
+                <a href="{% url 'registro' %}">Registrate</a>
+            </nav>
+        </div>
+        <div id="derecha">
+            <h5>Opciones de Pago</h5>
+            <nav>
+                <img src="{% static 'img/icons8_mercado_pago_30px.png' %}" alt="">
+                <img src="{% static 'img/icons8_visa_30px.png' %}" alt="">
+                <img src="{% static 'img/icons8_mastercard_30px.png' %}" alt="">
+            </nav>
+        </div>
+    </footer>
+
+    </html>

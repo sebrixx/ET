@@ -1,0 +1,137 @@
+@import url('https://fonts.googleapis.com/css2?family=Josefin+Sans&display=swap');
+* {
+    margin: 0;
+    padding: 0;
+    font-family: 'Josefin Sans', sans-serif;
+}
+
+body{
+    background-color: #B9E1D8 !important;
+    background-size: cover;
+    background-attachment: fixed;
+}
+
+.divisor {
+    width: 100%;
+    padding: 30px 0px;
+}
+
+.divisor > h4{
+    margin-top: 20px;
+    color: #00BFB3;
+    text-align: center;
+}
+
+.divisor > img{
+    display: block;
+    margin: 0 auto;
+    position: relative;
+    margin-top: -57px;
+    background-color: transparent;
+}
+
+#linea{
+    background-color: #00BFB3;
+    height: 4px;
+    width: 100%;
+    margin: 30px 0px;
+}
+
+/*Catálogo utensilios*/
+.catalogo-utensilios {
+    width: 100%;
+    max-width: 1200px;
+    height: auto;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    margin: 20px;
+    
+}
+
+
+.catalogo-utensilios .utensilios{
+    width: 330px;
+    height: 560px;
+    border-radius: 10px;
+    box-shadow: 0 2px 2px rgba(0, 0, 0, 0.2);
+    overflow: hidden;
+    margin: 10px;
+    text-align: center;
+    transition: all 0.25s;
+    background-color: #D9E2E5;
+    justify-content: center;
+    float: left;
+}
+
+.catalogo-utensilios .utensilios:hover{
+    transform: translateY(-15px);
+    box-shadow: 0 12px 16px rgba(0, 0, 0, 0.2);
+}
+
+.img img{
+    width: 200px;
+    height: auto;
+    padding: 10px;
+}
+
+.img h4{
+    font-weight: 600;
+}
+
+.datos-nro{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin: 10px 0;
+}
+
+.datos-oferta {
+    padding: 0 1rem;
+    font-size: 16px;
+    font-weight: 300;
+    text-align: justify;
+    display: flex;
+    flex-direction: row;
+    color: #4b4b4b;
+}
+
+p{
+    margin: 0px 5px;
+}
+
+.datos-nro2 p{
+    padding: 0 1rem;
+    font-size: 16px;
+    font-weight: 300;
+    text-align: justify;
+    display: flex;
+    flex-direction: column;
+}
+
+.precio-producto{
+    color: #7c7c7c;
+    display: inline-block;
+    text-decoration: line-through;
+}
+
+.productos-btns{
+    display: flex;
+    justify-content: center;    
+}
+
+.productos-btns button{
+    background-color: #F4BF9C;
+    text-decoration: none;    
+}
+
+.catalogo-utensilios .utensilios a {
+    font-weight: 500;
+    text-decoration: none;
+    color: #000000;
+}
+
+.stock-producto{
+    display: inline-block;
+}
